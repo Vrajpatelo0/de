@@ -54,6 +54,10 @@ const Questions = (props) => {
         event.preventDefault()
     }
 
+    function handleSaveClick(){
+        window.alert("Question paper saved.")
+    }
+
     return <div>{props.userQuestions.length >= 1 ? <div className='question-ui'>
         <form onSubmit={handleSubmit}>
             <input type="number" onChange={handleChange} value={numQuestion}></input>
@@ -78,7 +82,7 @@ const Questions = (props) => {
         }
         <div className='paper-buttons'>
             <button type='button' className='save-button bold-font content'>Save Questions</button>
-            <button type='button' className='save-button bold-font content'>Download Paper</button>
+            <button onClick={handleSaveClick} type='button'className='save-button bold-font content'>Download Paper</button>
         </div>
         </div> : ''}
     </div> 
