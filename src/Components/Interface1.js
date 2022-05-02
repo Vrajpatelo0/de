@@ -103,7 +103,7 @@ function Interface1(props) {
             <small className='inputLable content'>Option D</small>
             <input name="optionD" type="text" id='optionD' className='inputs content' data-index="5" value={question.optionD} onChange={handleChange} required />
           </div>
-          <div className='buttons'>
+          <div className='question-buttons'>
             <button type='submit' className="Addbtn content bold-font">Add Question</button>
             <button type='button' className='done-button Addbtn content bold-font'>
               <Link style={{textDecoration: 'none', color: 'white'}} onClick={(event) => {
@@ -112,6 +112,7 @@ function Interface1(props) {
             </button>
           </div>
         </form>
+        <br></br>
         <small className='content' style={{fontWeight: 'bold'}}>Note: Once you submit it you cannot change questions.</small>
       </div>
       {paper.length >= 1 ? <div className='rightdiv'>

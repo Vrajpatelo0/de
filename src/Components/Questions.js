@@ -54,23 +54,12 @@ const Questions = (props) => {
         event.preventDefault()
     }
 
-    return <div className='question-ui'>
+    return <div>{props.userQuestions.length >= 1 ? <div className='question-ui'>
         <form onSubmit={handleSubmit}>
             <input type="number" onChange={handleChange} value={numQuestion}></input>
             <button style={{backgroundColor: 'rgba(61, 111, 190, 0.849)', border: '1px solid black'}} className='content btn' type="submit">Generate</button>
         </form>
         <small style={{margin: '5px 0'}} className='content bold-font'>Enter number of question you need in your question paper.</small>
-        {/* <button 
-            className='content btn' 
-            style={{
-                margin: '10px 0', 
-                backgroundColor: 'rgba(61, 111, 190, 0.849)', 
-                color: 'white', 
-                border: '1px solid black'
-            }} 
-            onClick={handleShowClick} 
-            type='button'>{show ? 'Hide' : 'Show'} questions
-        </button> */}
         {show ? <div style={{marginTop: '25px', marginLeft: '0'}} className='rightdiv'>
         <h1 className='questionHeader heading'>Your final questions</h1>
         {
@@ -92,7 +81,10 @@ const Questions = (props) => {
             <button type='button' className='save-button bold-font content'>Download Paper</button>
         </div>
         </div> : ''}
-    </div>
+    </div> 
+    : <div className='generate-question-button'>
+        <a className='logout-button content bold-font' href='/generate_questions'>Generate Questions</a>    
+    </div>}</div>
 }
 
 export default Questions

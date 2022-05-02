@@ -148,7 +148,7 @@ const Profile = () => {
             <h4 className="content bold-font">John Doe</h4>
             <h5 style={activeTab.papers ? activeStyle : {}} id="papers" onClick={handleClick} className="content">Question Papers</h5>
             <h5 style={activeTab.profile ? activeStyle : {}} id="profile" onClick={handleClick} className="content">Edit Profile</h5>
-            <h5 style={activeTab.logout ? activeStyle : {}} id="logout" onClick={handleClick} className="content">Logout</h5>
+            <a className="content logout-button" href="/">Logout</a>
         </div>
         <div className="profile-right">
             {activeTab.papers ? <div>
